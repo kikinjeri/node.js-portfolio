@@ -1,0 +1,50 @@
+var commandLineArgs = process.argv;
+console.log(commandLineArgs);
+
+if we ever need to keep a sentence or multiple words together, 
+we need to remember to wrap them in quotes so that they stay together in 
+process.argv.
+
+
+const addNums = (numOne, numTwo) => numOne + numTwo;
+
+const sum = addNums(5, 3); // sum would be 8
+
+const addNums = (numOne, numTwo) => {
+  console.log(numOne, numTwo);
+  return numOne + numTwo;
+};
+
+With ES6, we can use a feature called template literals to embed JavaScript expressions
+ into the string.Template literals are enclosed by backticks (`) instead of double or single
+  quotes.
+
+  Multi-line Strings
+Template literals allow us to do easily something that would be difficult with regular strings: multi-line text.
+
+To do this, simply enter a keyboard return in the template literal wherever you want a 
+line break to occur, just as you would do if you were entering a line break in a word processor.
+
+const generatePage = (userName, githubName) => {
+  return `
+    Name: ${userName}
+    GitHub: ${githubName}
+  `;
+};
+To follow a basic principle of coding, always try to limit the functions and files to a 
+single responsibility.
+const generatePage= (name, github) => {
+    return `
+    <!DOCTYPE html> ...
+fs.writeFile('index.html', generatePage(name, github), err => {
+    if (err) throw err;
+
+    console.log('Portfolio Complete! Check out index.html to see the output!');
+
+The fs.writeFile() function definition has three arguments. 
+The first argument is the name of the file that's being created. 
+The next argument is the data that will write onto the file, in this case the HTML template
+ literal.
+ The last parameter is a callback function that will be used for error handling.
+
+ fs (filestystem) must be required at top of page
